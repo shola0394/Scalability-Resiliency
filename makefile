@@ -33,7 +33,7 @@ Create 1 VPC:
 	***Main route table automatically created
 	***security created automatically
 	***network ACL automatically created
-[Step 2:
+[Step 2:]
 Create Securitygroup:
 	open to all traffic
 attached to the vpc]xxx
