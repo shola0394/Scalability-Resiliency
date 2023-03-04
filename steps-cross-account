@@ -1,0 +1,29 @@
+CROSS ACCOUNT BETWEEN NAS FINANCIAL GROUP AND N2G AUDITING
+
+
+
+log into NAS FINANCIAL GROUP AWS ACCOUNT 
+ on the left side of the dashboard go to role
+ select CREATE role
+ IN the options click on aws account then select another aws account
+ in the account ID BOX , Provide n2g auditing aws account ID
+ click next to add permissions 
+ add AmazonEC2FullAccess and AWSTrustedAdvisorPriorityFullAccess permissions , thoses permissions will provide N2gfull access to your ec2 via the management console and help them have centralized way of reviewing if nas finacial group are following best aws pratices
+ name the role (N2G Accesssing NAS)
+ put a description
+ put a tag (optional)
+ create the role   
+
+ once the role is created go back to iam dashboard
+ click on role
+ select the role we just created (N2G Accesssing NAS)
+ copy the Link to switch roles in console (it looked like this https://signin.aws.amazon.com/switchrole?roleName=N2G_auditing&account=shola)
+   
+
+
+
+   IN N2G AUDITING ACCOUNT 
+   paste that link in the browser 
+   click on switch role 
+   done n2g have access to nas financial group and can have acess to their application and have centralized way of reviewing if nas finacial group are following best aws pratices
+

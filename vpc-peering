@@ -1,0 +1,35 @@
+
+STEP A
+
+
+
+log into financial group aws account
+navigate to vpc
+on the left dashboard select peering connections ,click on in
+click on creat peering connection
+name it
+Select a local VPC to peer with (NAS VPC)
+on  the option "Select another VPC to peer with " select another account
+add N2G AUDITING ACCOUNT ID
+swlwctthe region their account is located within
+paste N2G AUDITING VPC ID
+add a tag
+click on create the peering connection (A)
+
+
+edit nas financial route table 
+go to route table
+choose the route table youwant to edit
+click on edit
+on destination paste n2g auditing vpc cidr block
+on target select peering connection and select the peering connection create in A
+
+edit N2G AUDITING route table 
+go to route table
+choose the route table you want to edit
+click on edit
+on destination paste NAS FINANCIAL vpc cidr block
+on target select peering connection and select the peering connection create in A
+
+NB:   CHECK THE NACL,SECURITY GROUP TO MAKE SURE THEY SET UP PROPERLY 
+Once this setup is in place, N2G Auditing will be able to access application in the NAS Financial Group via their private ip( internally)
